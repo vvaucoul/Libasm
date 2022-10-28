@@ -8,7 +8,7 @@ This project was done with a intel x64 on MAC OS.
 
 - Clone Repository
 ```bash
-git clone https://vvaucoul/Libasm && cd Libasm
+git clone https://github.com/vvaucoul/Libasm && cd Libasm
 ```
 
 - Compilation
