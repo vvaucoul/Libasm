@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: vvaucoul <vvaucoul@student.42.fr>          +#+  +:+       +#+         #
+#    By: vvaucoul <vvaucoul@student.42.Fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/05 18:00:15 by vvaucoul          #+#    #+#              #
-#    Updated: 2020/06/25 15:37:30 by vvaucoul         ###   ########.fr        #
+#    Updated: 2022/10/28 17:02:43 by vvaucoul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,26 +74,26 @@ all:	$(NAME)
 
 $(NAME):     $(OBJ)
 	@$(AR) $(NAME) $(OBJ)
-	@echo "$(GREEN)	--->|LIBASM.a created|<----$(NOC)"
+	@printf "$(GREEN)	--->|LIBASM.a created|<----$(NOC)\n"
 
 bonus:	$(OBJ) $(OBJB)
 	@$(AR) $(NAME) $(OBJ) $(OBJB)
-	@echo "$(GREEN)	--->|LIBASM.a created with bonus|<----$(NOC)"
+	@printf "$(GREEN)	--->|LIBASM.a created with bonus|<----$(NOC)\n"
 
 test:	all
 	@$(CC) $(SRCC) -L. -lasm $(INCLUDE) -o $(NAMEC)
-	@echo "$(GREEN)	--->|test_libasm created|<----$(NOC)"
+	@printf "$(GREEN)	--->|test_libasm created|<----$(NOC)\n"
 
 test_bonus:	bonus
 	@$(CC) $(SRCCB) -L. -lasm $(INCLUDE) -o $(NAMECB)
-	@echo "$(GREEN)	--->|test_libasm created with bonus|<----$(NOC)"
+	@printf "$(GREEN)	--->|test_libasm created with bonus|<----$(NOC)\n"
 
 clean:
-	@echo "$(YELLOW)	--->|Clean files|<----$(NOC)"
+	@printf "$(YELLOW)	--->|Clean files|<----$(NOC)\n"
 	@rm -f $(OBJ) $(OBJB)
 
 fclean: clean
-	@echo "$(YELLOW)	--->|Remove libasm.a|<----$(NOC)"
+	@printf "$(YELLOW)	--->|Remove libasm.a|<----$(NOC)\n"
 	@rm -f $(NAME) $(BONUS) $(NAMEC) $(NAMECB)
 
 re: fclean all
